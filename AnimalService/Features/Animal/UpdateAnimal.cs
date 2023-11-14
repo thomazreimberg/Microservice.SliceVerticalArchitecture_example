@@ -59,7 +59,7 @@ namespace AnimalService.Features.Animal
         {
             public void AddRoutes(IEndpointRouteBuilder app)
             {
-                app.MapPost("api/animals/{id}", async (Guid id, CreateDto request, ISender sender) =>
+                app.MapPut("api/animals/{id}", async (Guid id, CreateDto request, ISender sender) =>
                 {
                     var command = request.Adapt<CreateAnimal.Command>();
                     command.Id = id;
