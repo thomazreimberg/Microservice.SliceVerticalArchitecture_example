@@ -1,8 +1,6 @@
-﻿using AnimalService.Database.Entities;
-
-namespace AnimalService.Contract.Animal
+﻿namespace Events
 {
-    public class AnimalDto
+    public class AnimalCreated
     {
         public Guid Id { get; set; }
         public int PublicId { get; set; }
@@ -15,8 +13,6 @@ namespace AnimalService.Contract.Animal
         public string Color { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public string CoverImageUrl { get; set; } = string.Empty;
-        public Status Status { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime? UpdatedAt { get; set; }
+        public string Status { get; set; } = string.Empty;
     }
 }
